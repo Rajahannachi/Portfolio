@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #A594F9aa); /* Lavande pastel */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #74C69Daa); /* Vert menthe pastel */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: linear-gradient(135deg, #F8F7FF, #F0EDFF); /* Dégradé pastel */
+  border: 2px solid #E2DCFF; /* Bordure lavande claire */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(165, 148, 249, 0.1); /* Ombre pastel */
+}
+
+.read-the-docs {
+  color: #6B6A8B; /* Texte pastel gris-violet */
+}
+
+/* Styles supplémentaires pour le thème pastel */
+body {
+  background: linear-gradient(135deg, #F8F7FF 0%, #F0EDFF 50%, #E2DCFF 100%);
+  color: #5D5A88;
+}
+
+/* Effets de hover pastel */
+.button-pastel {
+  background: linear-gradient(135deg, #A594F9, #C8B6FF);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.button-pastel:hover {
+  background: linear-gradient(135deg, #9580FF, #B8A3FF);
+  box-shadow: 0 8px 25px rgba(165, 148, 249, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Cartes pastel */
+.pastel-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid #E2DCFF;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(165, 148, 249, 0.1);
+}
+
+/* Liens pastel */
+.pastel-link {
+  color: #A594F9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pastel-link:hover {
+  color: #9580FF;
+  text-decoration: underline;
+}

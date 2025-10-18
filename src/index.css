@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-gray-100;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Titres avec un style plus cute */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-100 font-semibold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar personnalisée cute */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c084fc 0%, #a855f7 50%, #9333ea 100%);
+  border-radius: 10px;
+  border: 2px solid #312e81;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d8b4fe 0%, #c084fc 50%, #a855f7 100%);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Effets de glassmorphism cute */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(168, 85, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Animations cute */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-15px) rotate(2deg); 
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes bounce-cute {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+.bounce-cute {
+  animation: bounce-cute 2s ease-in-out infinite;
+}
+
+@keyframes glow-cute {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(168, 85, 247, 0.2),
+      0 0 40px rgba(168, 85, 247, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(168, 85, 247, 0.4),
+      0 0 60px rgba(168, 85, 247, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
+.glow-cute {
+  animation: glow-cute 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+.wiggle {
+  animation: wiggle 1s ease-in-out;
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Classes utilitaires cute */
+.cute-gradient {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #7c3aed 75%, #a855f7 100%);
+}
+
+.cute-border {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 20px rgba(168, 85, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cute-shadow {
+  box-shadow: 
+    0 10px 25px rgba(168, 85, 247, 0.3),
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient-cute {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 25%, #c084fc 50%, #e879f9 75%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+/* Boutons cute */
+.btn-cute {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 active:scale-95;
+  background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+  color: white;
+  box-shadow: 
+    0 4px 15px rgba(168, 85, 247, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-cute:hover {
+  box-shadow: 
+    0 6px 20px rgba(168, 85, 247, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Cards cute */
+.card-cute {
+  @apply rounded-3xl p-6 transition-all duration-300 hover:scale-105;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(168, 85, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-cute:hover {
+  box-shadow: 
+    0 12px 40px rgba(168, 85, 247, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Effets de particules */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #a855f7, #c084fc);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(2n) {
+  animation-delay: -2s;
+  background: linear-gradient(45deg, #e879f9, #f0abfc);
+}
+
+.particle:nth-child(3n) {
+  animation-delay: -4s;
+  background: linear-gradient(45deg, #c084fc, #e879f9);
+}
+
+/* Effets de hover cute */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(168, 85, 247, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Icônes cute */
+.icon-cute {
+  @apply transition-all duration-300;
+  filter: drop-shadow(0 2px 4px rgba(168, 85, 247, 0.2));
+}
+
+.icon-cute:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(168, 85, 247, 0.3));
+}
+
+/* Textes avec effet cute */
+.text-cute {
+  @apply font-medium;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.025em;
+}
+
+/* Background patterns cute */
+.bg-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(200, 132, 252, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(232, 121, 249, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%, 10% 90%, 90% 10%;
+  }
+  25% {
+    background-position: 25% 25%, 75% 75%, 25% 75%, 35% 65%, 65% 35%;
+  }
+  50% {
+    background-position: 50% 0%, 50% 100%, 0% 50%, 60% 40%, 40% 60%;
+  }
+  75% {
+    background-position: 75% 25%, 25% 75%, 75% 25%, 85% 15%, 15% 85%;
+  }
+}
+
+/* Animated background overlay */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  animation: backgroundFloat 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+    opacity: 0.8;
+  }
+}
