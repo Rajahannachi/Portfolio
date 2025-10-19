@@ -89,7 +89,11 @@ export default function Contact() {
           service_id: EMAILJS_SERVICE_ID,
           template_id: EMAILJS_TEMPLATE_ID,
           user_id: EMAILJS_PUBLIC_KEY,
-          template_params: templateParams,
+          template_params: {
+            ...templateParams,
+            from_email: formData.email,  // Force l'email de l'expéditeur
+            reply_to: formData.email,    // Force le reply-to
+          },
         }),
       });
 
@@ -103,7 +107,7 @@ export default function Contact() {
       } else {
         const errorText = await response.text();
         console.error("Erreur EmailJS:", errorText);
-        throw new Error("Erreur lors de l'envoi");
+        throw new Error(`Erreur lors de l'envoi: ${errorText}`);
       }
     } catch (error) {
       console.error("Erreur:", error);
