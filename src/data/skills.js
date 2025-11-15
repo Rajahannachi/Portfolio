@@ -26,6 +26,8 @@ export const skills = [
     { name: "UML", logo: "uml", color: "#10B981", category: "Tools & Methodologies", description: "Unified Modeling Language" },
     { name: "VS Code", logo: "vscode", color: "#10B981", category: "Tools & Methodologies", description: "Code editor" },
     { name: "Postman", logo: "postman", color: "#10B981", category: "Tools & Methodologies", description: "API development and testing" },
+    { name: "Docker", logo: "docker", color: "#06B6D4", category: "Tools & Methodologies", description: "Containerization platform" },
+    { name: "Kubernetes", logo: "kubernetes", color: "#06B6D4", category: "Tools & Methodologies", description: "Container orchestration system" },
 
     // Design & 3D Development - Orange
     { name: "Figma", logo: "figma", color: "#F59E0B", category: "Design & 3D Development", description: "Collaborative design tool" },
